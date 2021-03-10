@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.80.0" />
+    <title>مثال الألبوم · Bootstrap v5.0</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <meta name="theme-color" content="#7952b3" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">حول</h4>
+              <p class="text-muted">
+                أضف بعض المعلومات حول الألبوم أدناه أو المؤلف أو أي سياق خلفية
+                آخر. اجعلها بضع جمل طويلة حتى يتمكن الناس من التقاط بعض الحكايات
+                المفيدة. ثم اربطها ببعض مواقع التواصل الاجتماعي أو معلومات
+                الاتصال.
+              </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">اتصل</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">تابع على تويتر</a></li>
+                <li><a href="#" class="text-white">مثل في الفيسبوك</a></li>
+                <li><a href="#" class="text-white">راسلني</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              aria-hidden="true"
+              class="me-2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+              />
+              <circle cx="12" cy="13" r="4" />
+            </svg>
+            <strong>راقب</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="تبديل التنقل"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          {% comment %}
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">مثال الألبوم</h1>
+            <p class="lead text-muted">
+              شيء قصير وقائد حول المجموعة أدناه - محتوياتها ، ومنشئها ، وما إلى
+              ذلك. اجعلها قصيرة ولطيفة ، ولكن ليست قصيرة جدًا حتى لا يتخطى الناس
+              ببساطة هذه المجموعة تمامًا.
+            </p>
+            <p>
+              <a href="#" class="btn btn-primary my-2">الدعوة الرئيسية للعمل</a>
+              <a href="#" class="btn btn-secondary my-2">إضافه منتج </a>
+            </p>
+          </div>
+          {% endcomment %}
+          <div class="col">
+            <div class="card">
+              <div class="card-header">أسعار الذهب</div>
+              <div class="card-body">
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                  <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                      <div class="card-header">
+                        <h4 class="my-0 fw-normal">عيار 24</h4>
+                      </div>
+                      <div class="card-body">
+                        <h1 class="card-title pricing-card-title">
+                          {{gold24}} <small class="text-muted">جنيه </small>
+                        </h1>
+                        <button
+                          type="button"
+                          class="w-100 btn btn-lg btn-outline-primary"
+                        >
+                          راقب
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                      <div class="card-header">
+                        <h4 class="my-0 fw-normal">عيار 21</h4>
+                      </div>
+                      <div class="card-body">
+                        <h1 class="card-title pricing-card-title">
+                          {{gold21}}<small class="text-muted">جنيه </small>
+                        </h1>
+                        <button
+                          type="button"
+                          class="w-100 btn btn-lg btn-outline-primary"
+                        >
+                          راقب
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                      <div class="card-header">
+                        <h4 class="my-0 fw-normal">عيار 18</h4>
+                      </div>
+                      <div class="card-body">
+                        <h1 class="card-title pricing-card-title">
+                          {{gold18}} <small class="text-muted">جنيه </small>
+                        </h1>
+                        <button
+                          type="button"
+                          class="w-100 btn btn-lg btn-outline-primary"
+                        >
+                          راقب
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer text-muted text-right">
+                أخر تحديث: اليوم
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-muted py-5 text-right">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#">عد إلى الأعلى</a>
+        </p>
+        <p class="mb-1">
+          مثال الألبوم هو © Bootstrap ، ولكن يرجى تنزيله وتخصيصه لنفسك!
+        </p>
+        <p class="mb-0">
+          جديد على Bootstrap؟ <a href="/"> تفضل بزيارة الصفحة الرئيسية </a> أو
+          اقرأ
+          <a href="/docs/5.0/getting-started/introduction/ "> دليل البدء </a>.
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.rtlcss.com/bootstrap/v4.5.3/js/bootstrap.min.js"
+      integrity="sha384-VmD+lKnI0Y4FPvr6hvZRw6xvdt/QZoNHQ4h5k0RL30aGkR9ylHU56BzrE2UoohWK"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
